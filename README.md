@@ -6,11 +6,15 @@ How to use instaloader
 Question1：**Error 401 - Unauthorized "fail" status**  
 Solution:进入`instaloader`所在目录一般是`xxx\Lib\site-packages/instaloader`,打开`instaloadercontext.py`,搜索`def login(self, user, passwd):`,将`session.cookies.update({'sessionid': '', 'mid': '', 'ig_pr': '1',
                                 'ig_vw': '1920', 'ig_cb': '1', 'csrftoken': '',
-                                's_network': '', 'ds_user_id': ''})`中的`sessionid': ''`删除
+                                's_network': '', 'ds_user_id': ''})`中的`sessionid': ''`删除.
+Question2:**Error 443**
+Solution:多半因为没有开VPN或代理(科学上网).
+Question3:**Error 400 Bad Request - "fail" status**
+Solution:我这里是因为爬虫数量较大将账号封了.
 ## Use
 官网<a href="https://github.com/instaloader/instaloader?tab=readme-ov-file" target="_">instaloader</a>，详细使用见<a href="https://instaloader.github.io/" target="_">文档</a>.  
-使用`CLI`下载，你可以使用`instaloader TargetUsername --dirname-pattern TargetDir  --login Username --password Password`,`TargetUsername`为你想要下载的那个用户的用户名,`TargetDir`为下载到本地的目录，`Username`和`Passwrod`分别为你账号用户名和密码  
-**注:CLI方法没有提供类似sleep的操作，直接运行容易被官网发现而封号**
-使用`Python`下载，你可以下载`download.py`，并运行
+使用`CLI`下载，你可以使用`instaloader TargetUsername --dirname-pattern TargetDir  --login Username --password Password`,`TargetUsername`为你想要下载的那个用户的用户名,`TargetDir`为下载到本地的目录，`Username`和`Passwrod`分别为你账号用户名和密码.  
+使用`Python`下载，你可以下载`download.py`，运行`python download.py -username xx -targetUsername xx -saveDir xx -sleep xx`,`username`是自己账号用户名，`targetUsername`是目标用户名，`saveDir`是保存的本地目录，`sleep`是延迟爬虫间隔
+**注:CLI方法没有提供类似sleep的操作，建议使用Python代码,每次爬取数量尽量不要太多，容易封号**
 
 
