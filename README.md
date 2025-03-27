@@ -17,6 +17,6 @@ Solution:我这里是因为爬虫数量较大将账号封了.
 使用`Python`下载，你可以下载`download.py`，运行`python download.py -username xx -targetUsername xx -saveDir xx -sleep xx`,`username`是自己账号用户名，`targetUsername`是目标用户名，`saveDir`是保存的本地目录，`sleep`是延迟爬虫间隔  
 **注:CLI方法没有提供类似sleep的操作，建议使用Python代码,每次爬取数量尽量不要太多，容易封号**
 ## Discussion
-随着Facebook对调用类似Instagram API越来越严格，类似instaloader的库也要求必须使用账号登录，而每次脚本运行爬取部分post后都会被官方检测而导致封号，这里期望广大github热爱者来解决这个问题.
+随着Facebook对调用类似Instagram API越来越严格，类似instaloader的库也要求必须使用账号登录，而每次脚本运行爬取部分post后都会被官方检测而导致封号，这里期待广大github热爱者来解决这个问题.
 
 
